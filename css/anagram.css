@@ -1,0 +1,11 @@
+body {
+    font-family: verdana;
+}
+.error{
+	color: red;
+	font-size: 60%
+}
+#answer{
+	background-color: lightblue;
+	color: blue;
+}
