@@ -1,11 +1,44 @@
 body {
     font-family: verdana;
+    color: white;
+    background: #0A4176;
 }
+
+p{
+	text-align: center;
+}
+#mainDiv{
+	position: fixed;
+	top: 33%;
+	left: 33%;
+	border-radius: 25px;
+	background: #94C500;
+	width: 600px;
+	border: 2px solid white;	
+}
+
+#inputTable{
+	width: 100%;
+	border-spacing: 0px 5px;	
+}
+
+td {
+    text-align: center;
+	padding: 0px;
+}
+
 .error{
-	color: red;
-	font-size: 60%
+	color: blue;
+	font-size: 0.6em;
 }
+
 #answer{
 	background-color: lightblue;
 	color: blue;
+	text-align: center;
+}
+
+#titleLabel{	
+	text-align: center;
+	font-size: 1.5em;
 }

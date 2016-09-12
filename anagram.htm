@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Duolingo -- Programming Task: Anagram Checker</title>
+		<title>Programming Task: Anagram Checker</title>
 		<link rel="stylesheet" type="text/css" href="css/anagram.css">
 		<script src="scripts/anagram.js"></script>
 	</head>
 	<body>
-		<h1>Programming Task: Anagram Checker</h1>
-		<p>This simple application verifies whether or not two strings are anagrams of one another.</p>
-		<hr/>
-		<form name="anagramForm">
-			<table id="inputTable">
-			<tr id="inputRow">
-				<td>
-					First String:<br/>
-				  	<input type="text" name="firstString" id="firstString"><br/>
-				</td>
-			  	<td>
-			  		String the Second:<br/>
-		  			<input type="text" name="secondString" id="secondString"><br/>
-			  	</td>
-			</tr>
-			<tr id="errorRow">
-				<td><span id="string1Error" class="error"></span></td>
-				<td><span id="string2Error" class="error"></span></td>
-			</tr>
-			<tr id="submitRow">
-				<td>
-					<input name="submitButton" id="submitButton" type="button" onclick="clickProcessor()" value="Are these anagrams?">
-				</td>
-			</tr>
-			</table>	
-		</form>
-		<p><span id="answer"></span></p>
+		<div id=mainDiv>
+			<p id="titleLabel">Programming Task: Anagram Checker</p>
+			<p id="instructions">This simple application verifies whether or not two strings are anagrams.</p>
+			<hr/>
+			<form name="anagramForm">
+				<table id="inputTable">
+				<tr id="inputRow">
+					<td id="inputcell1">
+						First String:<br/>
+					  	<input type="text" name="firstString" id="firstString"><br/>
+					</td>
+				  	<td id="inputcell2">
+				  		String the Second:<br/>
+			  			<input type="text" name="secondString" id="secondString"><br/>
+				  	</td>
+				</tr>
+				<tr id="errorRow">
+					<td><span id="string1Error" class="error"></span></td>
+					<td><span id="string2Error" class="error"></span></td>
+				</tr>
+				<tr id="submitRow">
+					<td colspan="2">
+						<input name="submitButton" id="submitButton" type="button" onclick="clickProcessor()" value="Are these anagrams?">
+					</td>
+				</tr>
+				</table>	
+			</form>
+			<p><span id="answer"></span></p>
+		</div>
 	</body>
 </html>

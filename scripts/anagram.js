@@ -17,6 +17,7 @@ function clickProcessor()
 	var string2 = document.getElementById("secondString").value;
 	
 	//Trim the whitespace from both strings
+	
 	string1 = string1.replace(/\s/g,'');
 	string2 = string2.replace(/\s/g,'');
 		
@@ -40,7 +41,7 @@ function refreshOutput()
 }
 
 /**
- * The isValidInput function validates the input strings.  Currently, it only validates to make sure the input strings aren't blank 
+ * The isValidInput function validates the input strings.  Blank strings are not accepted and the input must be only alphanumeric or spaces 
  */
 function isValidInput(string1, string2)
 {
@@ -54,6 +55,16 @@ function isValidInput(string1, string2)
 		if(string2.length == 0)
 		{
 			document.getElementById("string2Error").innerHTML = "*Please enter a value for String 2";
+			string2IsValid = false;
+		}
+		if(/[^A-Za-z0-9]/.test(string1))
+		{
+			document.getElementById("string1Error").innerHTML = "*Alphanumeric characters only.";
+			string1IsValid = false;
+		}
+		if(/[^A-Za-z0-9]/.test(string2))
+		{
+			document.getElementById("string2Error").innerHTML = "*Alphanumeric characters only.";
 			string2IsValid = false;
 		}
 		return (string1IsValid && string2IsValid);
